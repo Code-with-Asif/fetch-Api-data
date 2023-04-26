@@ -1,0 +1,36 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.Tours{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+
+}
+.content{
+    height: auto;
+    width: 300px;
+    border: 2px solid rgb(133, 128, 128);
+    box-shadow: 3px 3px 3px gray;
+    margin: 10px;
+   
+}
+.content img{
+    width: 100%;
+    height:200px ;
+   
+}
+button{
+    width: 50%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: aqua;
+    
+}
