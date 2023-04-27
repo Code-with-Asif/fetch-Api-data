@@ -34,3 +34,33 @@ button:hover{
     background-color: aqua;
     
 }
+.footer{
+    background-color: blue;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(48, 31, 172);
+    padding: .7rem;
+    align-items: center;
+}
+.navbar .links{
+    display: flex;
+}
+.links li {
+    list-style: none;
+    margin: 0 .5rem;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .logo{
+    width: 50px;
+}
+.logo img{
+    width: 100%;
+}

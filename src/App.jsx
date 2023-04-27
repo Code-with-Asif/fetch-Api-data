@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import Tours from "./Tours";
-import Loader from "./Loader";
+import Loader from "./components/Loader";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 
 const App = () => {
   const url = "https://course-api.com/react-tours-project";
@@ -23,7 +26,7 @@ const App = () => {
   useEffect(() => {
     fetchTours();
   }, []);
-  if (isLoading == true) {
+  if (isLoading === true) {
     return <Loader />;
   }
   if (myTours.length === 0) {
@@ -31,9 +34,19 @@ const App = () => {
   }
 
   return (
-    <React.Fragment>
-      <Tours myTours={myTours} removeTour={removeTour} />
-    </React.Fragment>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          {/* <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Contact" element={<Contact />} /> */}
+        </Routes>
+        <Tours myTours={myTours} removeTour={removeTour} />
+        <Footer />
+      </Router>
+    </>
   );
 };
 
