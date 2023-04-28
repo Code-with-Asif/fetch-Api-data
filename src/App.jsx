@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import Tours from "./Tours";
+import Tours from "./components/Tours";
 import Loader from "./components/Loader";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   const url = "https://course-api.com/react-tours-project";
@@ -38,10 +41,10 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          {/* <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/Contact" element={<Contact />} /> */}
+
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
         <Tours myTours={myTours} removeTour={removeTour} />
         <Footer />
